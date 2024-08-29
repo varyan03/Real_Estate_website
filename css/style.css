@@ -25,10 +25,10 @@ nav{
 }
 
 .nav-part2{
-    
+   
     display: flex;
     align-items: center;
-    gap: 2vw;
+    gap: 1vw;
 }
 
 .nav-part2 h4{
@@ -36,6 +36,100 @@ nav{
     border: 1px solid #8c8a8aaa;
     border-radius: 50px;
     font-weight: 500;
+    font-size: 17px;
     color:#000000a9;
-    font-size: 14px;
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden;
 }
+
+/* 
+animation */
+.nav-part2 h4::after{
+    content:"";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+    
+}
+
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-part2 h4 a{
+    color: black;
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+}
+
+.nav-part2 h4 a:hover{
+    color: white;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    gap:6vw;
+}
+
+/* login and sign up */
+.nav-parta{
+    display: flex;
+    align-items: center;
+    gap:1vw;
+}
+
+/* for signup */
+.nav-parta h4{
+    padding: 10px 20px;
+    /* border: 1px solid #8c8a8aaa;
+    border-radius: 50px; */
+    font-weight: 500;
+    font-size: 17px;
+    color:#000000a9;
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.nav-parta h4 a{
+    color: black;
+    text-decoration: none;
+    z-index: 8;
+    position: relative;
+}
+
+/* 
+for login page */
+.login-button{
+    
+        padding: 10px 20px;
+        border: 1px solid #8c8a8aaa;
+        border-radius: 50px;
+        font-weight: 500;
+        font-size: 17px;
+        color:#000000a9;
+        transition: all ease 0.4s;
+        position: relative;
+        overflow: hidden;
+        background: #000;
+}
+
+.nav-parta .login-button a{
+    color: white;
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+}
+
+
+
