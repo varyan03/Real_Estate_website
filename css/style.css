@@ -150,7 +150,8 @@ for login page */
 }
 
 #left h3{
-    width:30vw ;
-    font-size:2vw ;
+    width:25vw ;
+    font-size:1.8vw ;
+    line-height:2vw;
 }
 
