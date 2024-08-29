@@ -1,7 +1,13 @@
+@font-face {
+    font-family:nue;
+    src: url(../NeueHaasDisplayRoman.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: nue;
 }
 html , body{
     height: 100%;
@@ -132,4 +138,19 @@ for login page */
 }
 
 
+
+#center{
+    height: 65vh;
+    width: 100%;
+    background: orange;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: space-between;
+    /* gap: 22vw; */
+}
+
+#left h3{
+    width:30vw ;
+    font-size:2vw ;
+}
 
