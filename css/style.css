@@ -19,6 +19,7 @@ height: 100vh;
 width: 100%;
 background: #EAE0D6;
 position: relative;
+padding:0 2vw;
 }
 
 nav{
@@ -142,12 +143,13 @@ for login page */
 #center{
     height: 65vh;
     width: 100%;
-    background: orange;
+    /* background: orange; */
     display: flex;
     align-items: flex-end ;
     justify-content: space-between;
     /* gap: 22vw; */
-    border: 1px solid #0000003c;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom:2.5vw;
 }
 
 #left h3{
@@ -155,4 +157,6 @@ for login page */
     font-size:1.8vw ;
     line-height:2vw;
 }
+
+
 
