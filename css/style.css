@@ -645,6 +645,9 @@ border-radius: 15px;
     background: #EAE0D6;
 }
 
+#p4-container{
+  position: relative;
+}
 .p4{
   padding-top:25vh;
 }
@@ -756,4 +759,9 @@ display:inline-block;
 /* Show the City Name on Hover */
 .city-card:hover .city-name {
   opacity: 1; /* Display text on hover */
+}
+
+.b4{
+  /* background: #000; */
+  position:absolute;
 }
