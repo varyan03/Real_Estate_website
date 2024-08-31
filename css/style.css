@@ -641,9 +641,9 @@ border-radius: 15px;
 
 /* page4 */
 #page4{
-    min-height: 100vh;
+    max-height: 90vh;
     width: 100%;
-    background: #EAE0D6;
+    background:#EAE0D6;
 }
 
 #p4-container{
@@ -766,3 +766,72 @@ display:inline-block;
   /* background: #000; */
   position:absolute;
 }
+
+/* page4ends here */
+
+/* Page 5 starts here */
+#page5{
+  height:130vh;
+  width: 100%;
+  background-color: #EAE0D6;
+}
+
+#page5-container{
+  min-height:100vh;
+  width:100%;
+  /* background: red; */
+  padding:4vh 5vh 0 6vh;
+}
+
+.p5{
+  padding-top:10vh;
+}
+
+#page5 .section_header{
+  max-width: 600px;
+  text-align: left;
+  font-size:4rem;
+}
+
+.buisness_grid{
+  margin-top:4rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:2rem;
+}
+
+.buisness_card{
+  padding: 2rem;
+  border-radius: 10px;
+  border-right: 1px  solid rgba(0,0,0,0.1);
+  transition: 0.3s; 
+}
+
+.buisness_card:hover{
+box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+
+.buisness_rating{
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #FE320B;
+}
+
+.buisness_card p{
+  margin-bottom:2rem;
+}
+
+.buisness_member{
+  display:flex;
+  align-items: center;
+  gap:1rem
+}
+
+.buisness_member img{
+  max-width: 70px;
+  border-radius: 50%;
+  object-fit:contain;
+  margin-bottom: 2rem;
+}
+
+   
