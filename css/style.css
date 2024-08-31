@@ -3,6 +3,13 @@
     src: url(../NeueHaasDisplayRoman.ttf);
 }
 
+@font-face {
+    font-family:nue;
+    font-weight:100;
+    src: url(../NeueHaasDisplayLight.ttf);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -298,3 +305,46 @@ for login page */
         transform: translate(-100%);
     }
  }
+
+ /* about us */
+ #page2-bottom{
+    height: 80vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:4vw ;
+     
+ }
+
+ #page2-bottom h1{
+font-size: 4vw;
+width: 45%;
+line-height: 4vw;
+/* padding:0px 3.5vw 0vh 0vw; */
+ }
+
+ #bottom-part2{
+    width:20%;
+    /* background: aqua; */
+
+ }
+ #bottom-part2 img{
+width: 100%;
+max-height: 30vh;
+object-fit: cover;
+border-radius: 15px;
+
+}
+
+#bottom-part2{
+    
+    /* margin-top: 3vw; */
+    
+}
+#bottom-part2 p{
+    font-weight: 100;
+    margin-top: 1vw;
+    font-size: 1vw;
+}
