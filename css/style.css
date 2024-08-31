@@ -260,6 +260,8 @@ for login page */
     min-height: 100vh;
     width: 100%;
     background-color:#EAE0D6;
+    padding: 8vw 0;
+    position: relative;
  }
 
  #moving-text{
@@ -315,13 +317,15 @@ for login page */
     align-items: center;
     justify-content: space-between;
     padding:4vw ;
-     
+    position: relative;
+    z-index: 9;
  }
 
  #page2-bottom h1{
 font-size: 4vw;
-width: 45%;
+width: 55%;
 line-height: 4vw;
+
 /* padding:0px 3.5vw 0vh 0vw; */
  }
 
@@ -347,4 +351,39 @@ border-radius: 15px;
     font-weight: 100;
     margin-top: 1vw;
     font-size: 1vw;
+}
+#page2 #gooey{
+    height:32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top right,#FE320B,#fe800b);
+    top:60%;
+    left:20%;
+    filter: blur(20px);
+    animation: gooey;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* -animation */
+@keyframes gooey{
+    from{
+        filter: blur(20px);
+        transform: translate(10%,-10%)skew(0);
+    }
+
+    to{
+        filter:blur(30px);
+        transform: translate(-10%,10%)skew(-12deg);
+    }
+}
+
+/* page3 starts here */
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #EAE0D6;
 }
