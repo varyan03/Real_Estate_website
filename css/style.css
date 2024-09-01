@@ -1028,6 +1028,14 @@ box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
     color:white;
     border-radius: 26px;
   }
+
+  /* Custom Styles for Footer */
+  footer {
+    background-color: #272D4E; /* Dark blue background color */
+  }
+  footer h5 {
+    color: #FF4500; /* Orange-red color for headers */
+  }
   @media screen and (min-width:800px){
     #page7-container{
       max-width: 1100px;
