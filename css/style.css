@@ -17,8 +17,9 @@
     font-family: nue;
 }
 html , body{
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    background-color: #3B4883;
 }
 
 #page1{
@@ -883,7 +884,16 @@ box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-bottom: -70vh;  */
+   
   }
+  /* #page7:after {
+    content: "";
+    display: block;
+  }
+  #page8, #page7:after {
+    height:70vh; 
+  } */
   
   #page7-container{
     min-height:80vh;
@@ -897,6 +907,8 @@ box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
     flex-direction: column;
     text-align: center;
     margin: auto;
+    border-radius:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.823), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .sectionHeader{
@@ -985,15 +997,36 @@ box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
     left: 0;
     width: 90%;
     height: 90%;
-    background: #000;
+    /* background: #000; */
+    
   }
   .map iframe{
     width: 100%;
     height: 100%;
+    border-radius: 18px;
   }
   .map-form-continer{
     /* background: red; */
     position: relative;
+  }
+
+
+  /* page8 footer starts here  */
+  #page8{
+    min-height:20vh;
+    width: 100%;
+    background-color: #272D4E;
+    margin-top: 20vh;
+  }
+  
+  #page8-container{
+    min-height:50vh;
+    width:90%;
+    
+    padding:20vh 5vh 0 10vh;
+    margin: 0vh 8vh;
+    color:white;
+    border-radius: 26px;
   }
   @media screen and (min-width:800px){
     #page7-container{
