@@ -835,6 +835,18 @@ for login page */
   position: absolute;
 }
 
+.b4 a{
+  text-decoration: none;
+  color:black;
+}
+
+.b4 h4 a:hover{
+  color:white;
+}
+
+#page4 h4 a:hover {
+  color: white;
+}
 /* page4ends here */
 
 /* Page 5 starts here */
@@ -1215,8 +1227,11 @@ footer h5 {
     }
 
     .con1{
-      top:51vh;
-      left:2vh;
+      margin-top: 5vh;
+      position:relative;
+      top:0%;
+      left:5%;
+      max-width:10vh;
     }
     .carousel-control-prev{
       display: none;
@@ -1224,12 +1239,33 @@ footer h5 {
 
     #page2-bottom{
       flex-wrap:wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-grow: 2;
+      /* flex-direction: column;
+      align-items: flex-start; */
+      /* justify-content: space-evenly; */
+      /* flex-grow: 2; */
+      margin: 0 12px;
       
     }
+    #center{
+      /* padding-bottom:5vh; */
+      /* background-color: #fe320b; */
+      max-height:40vh;
+    }
+    #center h1 {
+      font-weight: bold;
+      font-size: 12vw;
+      text-align:center;
+      line-height: 12vw;
+  }
+  #right{
+    /* padding-bottom: 4vh; */
+  }
+  #left h3 {
+    width: 25vw;
+    font-size: 2.5vw;
+    line-height: 2.9vw;
+    /* padding-bottom:2vh; */
+}
     #gola {
       height: 20px;
       width: 20px;
@@ -1238,7 +1274,57 @@ footer h5 {
       #center {
         height: 50vh;}
 
-        #hero-shape {top:50vh;}
+        #hero-shape {top:35vh;}
+
+        #page2 #gooey {
+          
+          top: 40%;
+          left: 20%;
+          
+      }
+
+        #page2 {
+          min-height: 100%;
+          width:100vw;
+          background-color: #eae0d6;
+          padding: 1vw 0;
+          position: relative;
+          
+      }
+
+      #moving-text {
+        white-space: nowrap;
+        overflow-x: auto;
+        padding: 10px 0 0 20px;
+    }
+      #bottom-part2 p {
+        font-weight: 100;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+      #page2-bottom h1 {
+        font-size: 9vw;
+        width: 90%;
+        line-height: 9vw;
+        margin: 15px 0;
+        /* padding: 0px 3.5vw 0vh 0vw; */
+    }
+    #bottom-part2{
+      margin-top: 5px;
+      width: 80%;
+      /* position: absolute;
+      left: 0vh;
+      bottom:-20vh; */
+    }
+
+    #bottom-part2 img {
+      width: 100%;
+      min-height: 20vh;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+
+
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
