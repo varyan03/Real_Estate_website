@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <title>Document</title>
     <style>
+      .swiper-slide{
+        margin:0 0 0 0.1em !important;
+      }
+     
+        #page1{
+        background:url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces) !important;
+        background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* color: #fff; */
+      }
+
+      #page6{
+        background:url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces);
+        background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+      }
       /* Swiper Specific CSS */
 .swiper {
     width: 100%;
@@ -39,7 +60,7 @@
     margin-bottom: 15px;
 }
 .property-name {
-    color: #FFA500; /* Orange color for the property name */
+    color:#FF4500; /* Orange color for the property name */
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -248,7 +269,7 @@
         <div id="container">
           <!-- Swiper -->
           <div class="swiper mySwiper">
-              <div class="swiper-wrapper " style="margin:10vh 0 0 10vh">
+              <div class="swiper-wrapper " style="margin:10vh -10vh 0 10vh">
                   <!-- Property Card 1 -->
                   <div class="swiper-slide">
                       <div class="property-card">
@@ -268,7 +289,7 @@
                       </div>
                   </div>
                   <!-- Property Card 3 -->
-                  <div class="swiper-slide">
+                  <div class="swiper-slide" style="margin:0  0 0vh">
                       <div class="property-card">
                           <div class="property-image" style="background-image: url('https://picsum.photos/300/180?random=3');"></div>
                           <div class="property-name">Cozy Cottage</div>
@@ -660,7 +681,7 @@ var swiper = new Swiper('.mySwiper', {
         },
         1024: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
         },
     },
 });
