@@ -19,7 +19,7 @@ html,
 body {
   height: 100vh;
   width: 100%;
-  background-color: #3b4883;
+  background-color: #eae0d6;
 }
 
 #page1 {
@@ -776,7 +776,7 @@ for login page */
   position: relative;
   width: 20vh;
   height: 30vh;
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/027/102/225/small_2x/gorgeous-sunset-over-la-skyline-with-palm-trees-upfront-photo.jpg"); /* Background image URL */
+  background-image: url("https://media.timeout.com/images/105851513/image.jpg"); /* Background image URL */
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -790,7 +790,7 @@ for login page */
   position: relative;
   width: 20vh;
   height: 30vh;
-  background-image: url("https://i.redd.it/ly0dz0te3exb1.jpg"); /* Background image URL */
+  background-image: url("https://a.travel-assets.com/findyours-php/viewfinder/images/res70/471000/471674-Miami.jpg"); /* Background image URL */
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -800,6 +800,33 @@ for login page */
   margin-left: 10vh;
 }
 
+.c7 {
+  position: relative;
+  width: 20vh;
+  height: 30vh;
+  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/majestic-rush-hour-atlanta-downtown-sunset-art-reid-callaway.jpg"); /* Background image URL */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Smooth hover transition */
+  cursor: pointer;
+  margin-left: 10vh;
+}
+
+.c8 {
+  position: relative;
+  width: 20vh;
+  height: 30vh;
+  background-image: url("https://media.istockphoto.com/id/476320382/photo/capitol-building-sunset-washington-dc-congress.jpg?s=612x612&w=0&k=20&c=125vz6AsiDK0RiXMJJgw3eSQlYokg7MYuHPOqT0-41g="); /* Background image URL */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Smooth hover transition */
+  cursor: pointer;
+  margin-left: 10vh;
+}
 
 
 /* Hover Effect for the City Card */
@@ -1195,6 +1222,10 @@ body{
   /* for slider */
   /* Responsive adjustments */
   @media (max-width: 768px) {
+
+    #page1{
+      background-attachment: scroll !important;
+    }
     #page3{
       height:100vh;
       width: 100vw;
@@ -1257,6 +1288,9 @@ body{
       display: none;
     }
 
+    #page2{
+      width: 100vh;
+    }
     #page2-bottom{
       flex-wrap:wrap;
       /* flex-direction: column;
@@ -1438,5 +1472,14 @@ form {
       width: 50vw; /* Adjust card width for tablets */
       height: auto; /* Adjust height for tablets */
     }
+  }
+}
+ 
+
+@media (min-width: 2560px){
+  #page1 {
+    /* background: #000 !important; */
+    background-size:2860px !important;
+
   }
 }
