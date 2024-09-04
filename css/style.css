@@ -39,6 +39,15 @@ nav {
   justify-content: space-between;
 }
 
+/* nav #img{
+  background:url(../media/img/Screenshot\ 2024-09-03\ 120616.png);
+  height:10vh;
+  width: 10vh;
+  border-radius:50%;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+} */
 .nav-part2 {
   display: flex;
   align-items: center;
@@ -941,6 +950,7 @@ for login page */
   border-radius: 50%;
   object-fit: contain;
   margin-bottom: 2rem;
+  
 }
 
 /* page5 ends here */
@@ -1094,15 +1104,16 @@ form {
   height: 70vh;
   right: 0;
   top: 0;
+  bottom:80vh;
   margin-top: 1.6em;
 }
 
 .map {
   position: absolute;
-  bottom: 0;
+  bottom: 10vh;
   left: 0;
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 70%;
   /* background: #000; */
 }
 .map iframe {
@@ -1180,7 +1191,7 @@ body{
     /* margin-bottom:20vh; */
   }
 
-  nav .img{
+  nav #img{
     position: absolute;
     left:-14%;
     bottom:86%;
@@ -1476,7 +1487,7 @@ form {
 }
  
 
-@media (min-width: 2560px){
+@media (min-width: 1480px){
   #page1 {
     /* background: #000 !important; */
     background-size:2860px !important;

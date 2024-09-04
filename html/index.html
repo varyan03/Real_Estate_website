@@ -1,500 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
-    <title>Document</title>
-    <style>
-      .swiper-slide{
-        margin:0 0 0 0.1em !important;
-      }
-     
-        #page1{
-        background:url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces) !important;
-        background-attachment: fixed !important;
-  background-position: center;
-  background-repeat: no-repeat !important;
-  background-size: cover;
-  /* color: #fff; */
-      }
 
-      #page6{
-        background:url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces);
-        background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-      }
-      /* Swiper Specific CSS */
-.swiper {
-    width: 100%;
-    height: 100%; /* Ensure Swiper takes full height of the container */
-}
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.property-card {
-    background-color: #000; /* Black background for the cards */
-    color: #fff;
-    width: 280px; /* Adjusted width of the cards */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s;
-}
-.property-card:hover {
-    transform: scale(1.05); /* Hover effect to slightly enlarge the card */
-}
-.property-image {
-    height: 180px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-.property-name {
-    color:#FF4500; /* Orange color for the property name */
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-.property-price {
-    color: #ffffff; /* White color for the price */
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.property-description {
-    color: #999;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+  <title>Document</title>
+  <style>
+    .swiper-slide {
+      margin: 0 0 0 0.1em !important;
+    }
 
-/* Navigation button styles */
-.swiper-button-next, .swiper-button-prev {
-    /* background-color: #FFA500; Orange color for the buttons */
-    color: #fff; /* White color for the button icons */
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-.swiper-button-next {
-    right: 10px; /* Positioning of the next button */
-}
-.swiper-button-prev {
-    left: 10px; /* Positioning of the previous button */
-}
-.swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 24px; /* Size of the navigation icons */
-}
-.swiper-pagination {
-    bottom: 10px; /* Adjust position of pagination dots */
-}
+    #page1 {
+      background: url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces) !important;
+      background-attachment: fixed !important;
+      background-position: center;
+      background-repeat: no-repeat !important;
+      background-size: cover;
+      /* color: #fff; */
+    }
 
-      .text-white{
-        text-decoration: none;
-      }
+    #page6 {
+      background: url(https://cdn-imgix.headout.com/media/images/6b20f14a35243bd237a4a8f2da6cff20-Empire%20state%20at%20sunset.jpg?auto=format&q=90&fit=crop&crop=faces);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+    }
 
-      .btn-primary{
-        margin-top: .3em;
-        background-color: #FF4500;
-        border: none;
-      }
+    /* Swiper Specific CSS */
+    .swiper {
+      width: 100%;
+      height: 100%;
+      /* Ensure Swiper takes full height of the container */
+    }
 
-      /* .btn{
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .property-card {
+      background-color: #000;
+      /* Black background for the cards */
+      color: #fff;
+      width: 280px;
+      /* Adjusted width of the cards */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+    }
+
+    .property-card:hover {
+      transform: scale(1.05);
+      /* Hover effect to slightly enlarge the card */
+    }
+
+    .property-image {
+      height: 180px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .property-name {
+      color: #FF4500;
+      /* Orange color for the property name */
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .property-price {
+      color: #ffffff;
+      /* White color for the price */
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .property-description {
+      color: #999;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    /* Navigation button styles */
+    .swiper-button-next,
+    .swiper-button-prev {
+      /* background-color: #FFA500; Orange color for the buttons */
+      color: #fff;
+      /* White color for the button icons */
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .swiper-button-next {
+      right: 10px;
+      /* Positioning of the next button */
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+      /* Positioning of the previous button */
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 24px;
+      /* Size of the navigation icons */
+    }
+
+    .swiper-pagination {
+      bottom: 10px;
+      /* Adjust position of pagination dots */
+    }
+
+    .text-white {
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      margin-top: .3em;
+      background-color: #FF4500;
+      border: none;
+    }
+
+    /* .btn{
         background-color: #FF4500c;
       } */
-    </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <!-- header -->
-    <div id="main">
-      <div id="page1">
-        <!-- nav bar -->
-        <nav>
-          <div class="img"><img
-            src="https://placeholderlogo.com/img/placeholder-logo-1.png"
-            alt=""
-          /></div>
-          
-          <!-- nav bar content -->
-          <div class="nav-container">
-            <div class="nav-part2">
-              <h4><a href="#">Home</a></h4>
-              <h4><a href="#">Poperties</a></h4>
-              <h4><a href="#">Agents</a></h4>
-              <h4><a href="#">About Us</a></h4>
-              <h4><a href="#">Contact Us</a></h4>
-            </div>
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
 
-            <h3>Menu</h3>
-            <!-- navbar login and signup -->
-            <div class="nav-parta">
-              <h4 class=""><a href="#">Sign Up</a></h4>
-              <h4 class="login-button"><a href="#">Login</a></h4>
-            </div>
-          </div>
-        </nav>
-
-        <!-- landing page -->
-        <div id="center">
-          <div id="left">
-            <h3>
-              Welcome to our premier real estate platform, where finding your
-              dream home or perfect investment property is made effortless.
-            </h3>
-          </div>
-          <div id="right">
-            <h1>
-              DISCOVER <br />
-              INVEST <br />
-              LIVE <br />
-            </h1>
-          </div>
-        </div>
-
-        <!-- animation -->
-        <div id="hero-shape">
-          <div id="hero-1"></div>
-          <div id="hero-2"></div>
-          <div id="hero-3"></div>
-        </div>
-
-        <!-- video -->
-        <video autoplay loop muted src="../media/videoplayback.mp4"></video>
-      </div>
+<body>
+  <!-- header -->
+  <div id="main">
+    <div id="page1">
+      <!-- nav bar -->
+      <nav>
+        <div id="img"">
+            <img
+            src=" https://placeholderlogo.com/img/placeholder-logo-1.png" alt="" />
     </div>
 
-    <!-- page 2 about us  -->
-    <div id="page2">
-      <div id="moving-text">
-        <!-- ist set -->
-        <div class="con">
-          <h1>BUY</h1>
-          <div id="gola"></div>
-          <h1>SELL</h1>
-          <div id="gola"></div>
-          <h1>RENT</h1>
-          <div id="gola"></div>
-        </div>
-
-        <!-- 2nd set -->
-        <div class="con">
-          <h1>BUY</h1>
-          <div id="gola"></div>
-          <h1>SELL</h1>
-          <div id="gola"></div>
-          <h1>RENT</h1>
-          <div id="gola"></div>
-        </div>
-
-        <!-- 3rd set -->
-        <div class="con">
-          <h1>BUY</h1>
-          <div id="gola"></div>
-          <h1>SELL</h1>
-          <div id="gola"></div>
-          <h1>RENT</h1>
-          <div id="gola"></div>
-        </div>
+    <!-- nav bar content -->
+    <div class="nav-container">
+      <div class="nav-part2">
+        <h4><a href="#">Home</a></h4>
+        <h4><a href="#">Poperties</a></h4>
+        <h4><a href="#">Agents</a></h4>
+        <h4><a href="#">About Us</a></h4>
+        <h4><a href="#">Contact Us</a></h4>
       </div>
 
-      <!-- about us /what we do -->
-      <div id="page2-bottom">
+      <h3>Menu</h3>
+      <!-- navbar login and signup -->
+      <div class="nav-parta">
+        <h4 class=""><a href="#">Sign Up</a></h4>
+        <h4 class="login-button"><a href="#">Login</a></h4>
+      </div>
+    </div>
+    </nav>
+
+    <!-- landing page -->
+    <div id="center">
+      <div id="left">
+        <h3>
+          Welcome to our premier real estate platform, where finding your
+          dream home or perfect investment property is made effortless.
+        </h3>
+      </div>
+      <div id="right">
         <h1>
-          We are a dedicated team committed to helping you find your dream home
-          with expertise, integrity, and personalized service.
+          DISCOVER <br />
+          INVEST <br />
+          LIVE <br />
         </h1>
-
-        <div id="bottom-part2">
-          <img
-            src="../media/img/about_us/modern-business-building-scenery-touching-sky.jpg"
-            alt=""
-          />
-          <p>
-            We specialize in connecting buyers, sellers, and renters with the
-            perfect properties to suit their needs. Through market expertise,
-            personalized guidance, and a seamless process, we make real estate
-            transactions simple, transparent, and stress-free. Our mission is to
-            turn your property dreams into reality, one step at a time.
-          </p>
-        </div>
-
-        <!-- animation -->
-        
       </div>
-      <div id="gooey">
-          
-        </div>
     </div>
 
-    <!-- featured properties -->
-    <div id="page3">
-      
-      <div class="header-container">
-        <div class="round"></div>
-        <h2>Featured Properties</h2>
+    <!-- animation -->
+    <div id="hero-shape">
+      <div id="hero-1"></div>
+      <div id="hero-2"></div>
+      <div id="hero-3"></div>
+    </div>
+
+    <!-- video -->
+    <video autoplay loop muted src="../media/videoplayback.mp4"></video>
+  </div>
+  </div>
+
+  <!-- page 2 about us  -->
+  <div id="page2">
+    <div id="moving-text">
+      <!-- ist set -->
+      <div class="con">
+        <h1>BUY</h1>
+        <div id="gola"></div>
+        <h1>SELL</h1>
+        <div id="gola"></div>
+        <h1>RENT</h1>
+        <div id="gola"></div>
       </div>
 
-        <!-- properties -->
-      
-        <div id="wrapper">
-        
-        </div>
-        <div class="wr">
-          <div id="heros-container">
-          <div id="heros-1"></div>
-          <div id="heros-2"></div>
-          <div id="heros-3"></div>
-        </div>
-       
+      <!-- 2nd set -->
+      <div class="con">
+        <h1>BUY</h1>
+        <div id="gola"></div>
+        <h1>SELL</h1>
+        <div id="gola"></div>
+        <h1>RENT</h1>
+        <div id="gola"></div>
+      </div>
 
-        <div id="container">
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-              <div class="swiper-wrapper " style="margin:10vh -10vh 0 10vh">
-                  <!-- Property Card 1 -->
-                  <div class="swiper-slide">
-                      <div class="property-card">
-                          <div class="property-image" style="background-image: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg');"></div>
-                          <div class="property-name">Modern Apartment</div>
-                          <div class="property-price">$350,000</div>
-                          <div class="property-description">A beautiful modern apartment located in the heart of the city.</div>
-                      </div>
-                  </div>
-                  <!-- Property Card 2 -->
-                  <div class="swiper-slide">
-                      <div class="property-card">
-                          <div class="property-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrSkgYaowM_fDVrcKh7xUni4l7FWUlIo_0BA&s');"></div>
-                          <div class="property-name">Luxury Villa</div>
-                          <div class="property-price">$1,200,000</div>
-                          <div class="property-description">A luxurious villa with stunning sea views and private pool.</div>
-                      </div>
-                  </div>
-                  <!-- Property Card 3 -->
-                  <div class="swiper-slide" style="margin:0  0 0vh">
-                      <div class="property-card">
-                          <div class="property-image" style="background-image: url('https://www.southernliving.com/thmb/R50HDhYdsNA9mQKzE9zFenYcA4M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2270901_cainc0259_1-2000-36b6699219454ee298de1d4565f1ab7d.jpg');"></div>
-                          <div class="property-name">Cozy Cottage</div>
-                          <div class="property-price">$250,000</div>
-                          <div class="property-description">A charming cottage located in a quiet countryside location.</div>
-                      </div>
-                  </div>
-                  <!-- Property Card 4 -->
-                  <div class="swiper-slide">
-                      <div class="property-card">
-                          <div class="property-image" style="background-image: url('https://i0.wp.com/www.laloftblog.com/wp-content/uploads/2023/05/luxury-2-story-loft.png?resize=800%2C572&ssl=1');"></div>
-                          <div class="property-name">Urban Loft</div>
-                          <div class="property-price">$450,000</div>
-                          <div class="property-description">An urban loft with modern amenities and great city views.</div>
-                      </div>
-                  </div>
-                  <!-- Property Card 5 -->
-                  <div class="swiper-slide">
-                      <div class="property-card">
-                          <div class="property-image" style="background-image: url('https://cdn.autonomous.ai/static/upload/images/new_post/tiny-beach-house-designs-for-privacy-6520-1685693866974.webp');"></div>
-                          <div class="property-name">Beach House</div>
-                          <div class="property-price">$850,000</div>
-                          <div class="property-description">A beautiful beach house with direct access to the sandy shores.</div>
-                      </div>
-                  </div>
+      <!-- 3rd set -->
+      <div class="con">
+        <h1>BUY</h1>
+        <div id="gola"></div>
+        <h1>SELL</h1>
+        <div id="gola"></div>
+        <h1>RENT</h1>
+        <div id="gola"></div>
+      </div>
+    </div>
+
+    <!-- about us /what we do -->
+    <div id="page2-bottom">
+      <h1>
+        We are a dedicated team committed to helping you find your dream home
+        with expertise, integrity, and personalized service.
+      </h1>
+
+      <div id="bottom-part2">
+        <img src="../media/img/about_us/modern-business-building-scenery-touching-sky.jpg" alt="" />
+        <p>
+          We specialize in connecting buyers, sellers, and renters with the
+          perfect properties to suit their needs. Through market expertise,
+          personalized guidance, and a seamless process, we make real estate
+          transactions simple, transparent, and stress-free. Our mission is to
+          turn your property dreams into reality, one step at a time.
+        </p>
+      </div>
+
+      <!-- animation -->
+
+    </div>
+    <div id="gooey">
+
+    </div>
+  </div>
+
+  <!-- featured properties -->
+  <div id="page3">
+
+    <div class="header-container">
+      <div class="round"></div>
+      <h2>Featured Properties</h2>
+    </div>
+
+    <!-- properties -->
+
+    <div id="wrapper">
+
+    </div>
+    <div class="wr">
+      <div id="heros-container">
+        <div id="heros-1"></div>
+        <div id="heros-2"></div>
+        <div id="heros-3"></div>
+      </div>
+
+
+      <div id="container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper " style="margin:10vh -10vh 0 10vh">
+            <!-- Property Card 1 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image"
+                  style="background-image: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg');">
+                </div>
+                <div class="property-name">Modern Apartment</div>
+                <div class="property-price">$350,000</div>
+                <div class="property-description">A beautiful modern apartment located in the heart of the city.</div>
               </div>
-              <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- Add Navigation -->
-              <div class="swiper-button-prev" style="color:#FF4500"></div>
-              <div class="swiper-button-next" style="color:#FF4500"></div>
+            </div>
+            <!-- Property Card 2 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image"
+                  style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrSkgYaowM_fDVrcKh7xUni4l7FWUlIo_0BA&s');">
+                </div>
+                <div class="property-name">Luxury Villa</div>
+                <div class="property-price">$1,200,000</div>
+                <div class="property-description">A luxurious villa with stunning sea views and private pool.</div>
+              </div>
+            </div>
+            <!-- Property Card 3 -->
+            <div class="swiper-slide" style="margin:0  0 0vh">
+              <div class="property-card">
+                <div class="property-image"
+                  style="background-image: url('https://www.southernliving.com/thmb/R50HDhYdsNA9mQKzE9zFenYcA4M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2270901_cainc0259_1-2000-36b6699219454ee298de1d4565f1ab7d.jpg');">
+                </div>
+                <div class="property-name">Cozy Cottage</div>
+                <div class="property-price">$250,000</div>
+                <div class="property-description">A charming cottage located in a quiet countryside location.</div>
+              </div>
+            </div>
+            <!-- Property Card 4 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image"
+                  style="background-image: url('https://i0.wp.com/www.laloftblog.com/wp-content/uploads/2023/05/luxury-2-story-loft.png?resize=800%2C572&ssl=1');">
+                </div>
+                <div class="property-name">Urban Loft</div>
+                <div class="property-price">$450,000</div>
+                <div class="property-description">An urban loft with modern amenities and great city views.</div>
+              </div>
+            </div>
+            <!-- Property Card 5 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image"
+                  style="background-image: url('https://cdn.autonomous.ai/static/upload/images/new_post/tiny-beach-house-designs-for-privacy-6520-1685693866974.webp');">
+                </div>
+                <div class="property-name">Beach House</div>
+                <div class="property-price">$850,000</div>
+                <div class="property-description">A beautiful beach house with direct access to the sandy shores.</div>
+              </div>
+            </div>
           </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-prev" style="color:#FF4500"></div>
+          <div class="swiper-button-next" style="color:#FF4500"></div>
+        </div>
       </div>
-      
-        <!-- Carousel Container -->
-        <!-- <button class="see-all-btn">See All</button> -->
-        <!-- See all  -->
-         <div class="h4-container con1"><h4><a href="#">See All</a></h4></div>
-        
-    </div>   
+
+      <!-- Carousel Container -->
+      <!-- <button class="see-all-btn">See All</button> -->
+      <!-- See all  -->
+      <div class="h4-container con1">
+        <h4><a href="#">See All</a></h4>
+      </div>
+
+    </div>
 
     <!-- page4 -->
-     <div id="page4">
-      <div id="p4-container"> <div class="header-container p4">
-        <div class="round"></div>
-        <h2>Our Locations</h2>
-      </div>
+    <div id="page4">
+      <div id="p4-container">
+        <div class="header-container p4">
+          <div class="round"></div>
+          <h2>Our Locations</h2>
+        </div>
 
-      <div id="moving-img-container">
-        <div id="moving-img">
-          <div class="cont">
-            <!-- City Card with Hover Effect -->
-            <div class="city-card">
-              <!-- City Name Overlay -->
-              <div class="city-name">Austin</div>
-            </div>
-            <!-- City Card with Hover Effect -->
-            <div class="city-card c1">
-              <!-- City Name Overlay -->
-              <div class="city-name">New York</div>
-            </div>
-            <!-- City Card with Hover Effect -->
-            <div class="city-card c2">
-              <!-- City Name Overlay -->
-              <div class="city-name">Boston</div>
-            </div>
-          </div>
-          <div class="cont">
-            <!-- City Card with Hover Effect -->
-            <div class="city-card c3">
-              <!-- City Name Overlay -->
-              <div class="city-name">Seattle</div>
-            </div>
-            <!-- City Card with Hover Effect -->
-            <div class="city-card c4">
-              <!-- City Name Overlay -->
-              <div class="city-name">Chicago</div>
-            </div>
-            <!-- City Card with Hover Effect -->
-            <div class="city-card c5">
-              <!-- City Name Overlay -->
-              <div class="city-name">Los Angeles</div>
-            </div>
-          </div>
-          <div class="cont">
+        <div id="moving-img-container">
+          <div id="moving-img">
+            <div class="cont">
               <!-- City Card with Hover Effect -->
-      <div class="city-card c6">
-          <!-- City Name Overlay -->
-          <div class="city-name">Miami</div>
-      </div><!-- City Card with Hover Effect -->
-      <div class="city-card c7">
-          <!-- City Name Overlay -->
-          <div class="city-name">Atlanta</div>
-      </div><!-- City Card with Hover Effect -->
-      <div class="city-card c8">
-          <!-- City Name Overlay -->
-          <div class="city-name">Washington</div>
-      </div>
+              <div class="city-card">
+                <!-- City Name Overlay -->
+                <div class="city-name">Austin</div>
+              </div>
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c1">
+                <!-- City Name Overlay -->
+                <div class="city-name">New York</div>
+              </div>
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c2">
+                <!-- City Name Overlay -->
+                <div class="city-name">Boston</div>
+              </div>
+            </div>
+            <div class="cont">
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c3">
+                <!-- City Name Overlay -->
+                <div class="city-name">Seattle</div>
+              </div>
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c4">
+                <!-- City Name Overlay -->
+                <div class="city-name">Chicago</div>
+              </div>
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c5">
+                <!-- City Name Overlay -->
+                <div class="city-name">Los Angeles</div>
+              </div>
+            </div>
+            <div class="cont">
+              <!-- City Card with Hover Effect -->
+              <div class="city-card c6">
+                <!-- City Name Overlay -->
+                <div class="city-name">Miami</div>
+              </div><!-- City Card with Hover Effect -->
+              <div class="city-card c7">
+                <!-- City Name Overlay -->
+                <div class="city-name">Atlanta</div>
+              </div><!-- City Card with Hover Effect -->
+              <div class="city-card c8">
+                <!-- City Name Overlay -->
+                <div class="city-name">Washington</div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="h4-container b4">
+          <h4><a href="#">See All</a></h4>
+        </div>
       </div>
-      <div class="h4-container b4"><h4><a href="#">See All</a></h4></div></div>
-      
-      
-     </div>
 
-    
-      <!-- page5 reviews page -->
-      <div id="page5">
-        <div id="page5-container">
-          <!-- <div class="header-container p5">
+
+    </div>
+
+
+    <!-- page5 reviews page -->
+    <div id="page5">
+      <div id="page5-container">
+        <!-- <div class="header-container p5">
             <div class="round"></div>
             <h2>Reviews</h2>
           </div> -->
 
-          <h2 class="section_header">
-            Loved By Buisnesses, And Individuals Across The GLobe
-          </h2>
+        <h2 class="section_header">
+          Loved By Buisnesses, And Individuals Across The GLobe
+        </h2>
 
-          <div class="buisness_grid">
-            <div class="buisness_card">
-              <div class="buisness_rating">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-line"></i></span>
-              </div>
-
-              <p>
-                A comprehensive real estate website offering a user-friendly interface for browsing properties, complete with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate experience.
-              </p>
-
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4>Emily Smith</h4>
-                    <p>software engineer</p>
-                  </div>
-              </div>
+        <div class="buisness_grid">
+          <div class="buisness_card">
+            <div class="buisness_rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-line"></i></span>
             </div>
 
-            <div class="buisness_card">
-              <div class="buisness_rating">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-line"></i></span>
-              </div>
+            <p>
+              A comprehensive real estate website offering a user-friendly interface for browsing properties, complete
+              with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides
+              essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate
+              experience.
+            </p>
 
-              <p>
-                A comprehensive real estate website offering a user-friendly interface for browsing properties, complete with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate experience.
-              </p>
-
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4>Emily Smith</h4>
-                    <p>software engineer</p>
-                  </div>
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4>Emily Smith</h4>
+                <p>software engineer</p>
               </div>
             </div>
-
-            <div class="buisness_card">
-              <div class="buisness_rating">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-line"></i></span>
-              </div>
-
-              <p>
-                A comprehensive real estate website offering a user-friendly interface for browsing properties, complete with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate experience.
-              </p>
-
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4>Emily Smith</h4>
-                    <p>software engineer</p>
-                  </div>
-              </div>
-            </div>
-
           </div>
+
+          <div class="buisness_card">
+            <div class="buisness_rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-line"></i></span>
+            </div>
+
+            <p>
+              A comprehensive real estate website offering a user-friendly interface for browsing properties, complete
+              with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides
+              essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate
+              experience.
+            </p>
+
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4>Emily Smith</h4>
+                <p>software engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="buisness_card">
+            <div class="buisness_rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-line"></i></span>
+            </div>
+
+            <p>
+              A comprehensive real estate website offering a user-friendly interface for browsing properties, complete
+              with detailed listings, high-quality images, virtual tours, and advanced search filters. It provides
+              essential tools for buyers, sellers, and agents to connect seamlessly, enhancing the overall real estate
+              experience.
+            </p>
+
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4>Emily Smith</h4>
+                <p>software engineer</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </div>
 
-      <!-- page6 agents page -->
-      <div id="page6">
-        <div id="page6-container">
-          <!-- <div class="header-container p5">
+    <!-- page6 agents page -->
+    <div id="page6">
+      <div id="page6-container">
+        <!-- <div class="header-container p5">
             <div class="round"></div>
             <h2>Reviews</h2>
           </div> -->
 
-          <h2 class="section_header">
-            "Empowering <span>Agents</span> to Close Deals Faster and Smarter."
-          </h2>
+        <h2 class="section_header">
+          "Empowering <span>Agents</span> to Close Deals Faster and Smarter."
+        </h2>
 
-          <div class="buisness_grid">
-            <div class="buisness_card">
-              <!-- <div class="buisness_rating">
+        <div class="buisness_grid">
+          <div class="buisness_card">
+            <!-- <div class="buisness_rating">
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
                 <span><i class="ri-star-fill"></i></span>
@@ -502,190 +551,205 @@
                 <span><i class="ri-star-half-line"></i></span>
               </div> -->
 
-              <p>
-                [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth, personalized experience whether buying or selling.
+            <p>
+              [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused
+              approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth,
+              personalized experience whether buying or selling.
 
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4 class="agent-name">Aaron Smith</h4>
-                    <p></p>
-                  </div>
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4 class="agent-name">Aaron Smith</h4>
+                <p></p>
               </div>
             </div>
-
-            <div class="buisness_card">
-              <!-- <div class="buisness_rating">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-line"></i></span>
-              </div> -->
-
-              <p>
-                [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth, personalized experience whether buying or selling.
-              </p>
-
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4 class="agent-name">William Smith</h4>
-                    <p></p>
-                  </div>
-              </div>
-            </div>
-
-            <div class="buisness_card">
-              <!-- <div class="buisness_rating">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-line"></i></span>
-              </div> -->
-
-              <p>
-                [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth, personalized experience whether buying or selling.
-              </p>
-
-              <div class="buisness_member">
-                <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg" alt="">
-                  <div class="buisness_member_details">
-                    <h4 class="agent-name">John Cena</h4>
-                    <p></p>
-                  </div>
-              </div>
-            </div>
-
           </div>
+
+          <div class="buisness_card">
+            <!-- <div class="buisness_rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-line"></i></span>
+              </div> -->
+
+            <p>
+              [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused
+              approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth,
+              personalized experience whether buying or selling.
+            </p>
+
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4 class="agent-name">William Smith</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="buisness_card">
+            <!-- <div class="buisness_rating">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-half-line"></i></span>
+              </div> -->
+
+            <p>
+              [Agent Name] is your dedicated real estate expert, offering deep market insight and a client-focused
+              approach. With strong negotiation skills and clear communication, [Agent Name] ensures a smooth,
+              personalized experience whether buying or selling.
+            </p>
+
+            <div class="buisness_member">
+              <img src="https://as1.ftcdn.net/v2/jpg/08/24/57/78/1000_F_824577894_QCyj5qiTsRMiEeBDn3bKJJXjQxM4lCPb.jpg"
+                alt="">
+              <div class="buisness_member_details">
+                <h4 class="agent-name">John Cena</h4>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+    </div>
 
-      <!-- contact us form -->
-      <div id="page7">
-        <div id="page7-container">
-          <h4 class="sectionHeader">CONTACT US</h4>
-          <h1 class="heading">GET IN TOUCH</h1>
-          <!-- <p class="sub-heading">GET IN TOUCH WITH US 
+    <!-- contact us form -->
+    <div id="page7">
+      <div id="page7-container">
+        <h4 class="sectionHeader">CONTACT US</h4>
+        <h1 class="heading">GET IN TOUCH</h1>
+        <!-- <p class="sub-heading">GET IN TOUCH WITH US 
             AND LET US KNOW HOW CAN WE HELP YOU
           </p> -->
-          <div class="map-form-continer"><div class="contactForm">
+        <div class="map-form-continer">
+          <div class="contactForm">
             <form action="#">
               <h1 class="sub-heading">Need Support!</h1>
               <p class="para para2">Contact us for help!</p>
-              
+
               <!-- inputs -->
-               <input type="text" class="input" placeholder="Your Name">
-               <input type="text" class="input" placeholder="Your Email">
-               <input type="text" class="input" placeholder="Your Subject">
-               <textarea class="input" cols="30" rows="5"></textarea>
-                <input type="submit" class="input submit" value="Send Message">
+              <input type="text" class="input" placeholder="Your Name">
+              <input type="text" class="input" placeholder="Your Email">
+              <input type="text" class="input" placeholder="Your Subject">
+              <textarea class="input" cols="30" rows="5" placeholder="Your message"></textarea>
+              <input type="submit" class="input submit" value="Send Message">
             </form>
             <div class="map-container">
               <div class="mapBg"></div>
               <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.1751343148626!2d76.6597778!3d30.516086499999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1725181797607!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.1751343148626!2d76.6597778!3d30.516086499999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1725181797607!5m2!1sen!2sin"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-             </div>
+            </div>
           </div>
-          
 
-            <!-- map0 -->
-             
-          </div>
-        </div>  
+
+          <!-- map0 -->
+
+        </div>
       </div>
+    </div>
 
-      <!-- footer  -->
-      <footer class="text-white pt-4 pb-4 mt-auto">
-        <div class="container">
-          <div class="row">
-            <!-- About Section -->
-            <div class="col-md-3 mb-3">
-              <h5>About Us</h5>
-              <p>We are a company committed to providing the best real estate services to our clients.</p>
-            </div>
-    
-            <!-- Links Section -->
-            <div class="col-md-3 mb-3">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Home</a></li>
-                <li><a href="#" class="text-white">About</a></li>
-                <li><a href="#" class="text-white">Services</a></li>
-                <li><a href="#" class="text-white">Contact</a></li>
-              </ul>
-            </div>
-    
-            <!-- Contact Section -->
-            <div class="col-md-3 mb-3">
-              <h5>Contact Us</h5>
-              <address>
-                123 Real Estate Ave,<br>
-                City, State, 12345<br>
-                Phone: (123) 456-7890<br>
-                Email: <a href="mailto:info@realestate.com" class="text-white">info@realestate.com</a>
-              </address>
-            </div>
-    
-            <!-- Newsletter Section -->
-            <div class="col-md-3 mb-3">
-              <h5>Newsletter</h5>
-              <p>Subscribe to our newsletter for the latest updates.</p>
-              <form>
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Enter your email" required>
-                </div>
-                <button type="submit" style="background-color: #FF4500; color: white; border: none;" class="btn btn-primary">Subscribe</button>
-              </form>
-            </div>
+    <!-- footer  -->
+    <footer class="text-white pt-4 pb-4 mt-auto">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-3 mb-3">
+            <h5>About Us</h5>
+            <p>We are a company committed to providing the best real estate services to our clients.</p>
           </div>
-          <hr class="bg-white">
-          <div class="text-center">
-            <p>&copy; 2024 Real Estate Company. All Rights Reserved.</p>
+
+          <!-- Links Section -->
+          <div class="col-md-3 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Home</a></li>
+              <li><a href="#" class="text-white">About</a></li>
+              <li><a href="#" class="text-white">Services</a></li>
+              <li><a href="#" class="text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="col-md-3 mb-3">
+            <h5>Contact Us</h5>
+            <address>
+              123 Real Estate Ave,<br>
+              City, State, 12345<br>
+              Phone: (123) 456-7890<br>
+              Email: <a href="mailto:info@realestate.com" class="text-white">info@realestate.com</a>
+            </address>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div class="col-md-3 mb-3">
+            <h5>Newsletter</h5>
+            <p>Subscribe to our newsletter for the latest updates.</p>
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <button type="submit" style="background-color: #FF4500; color: white; border: none;"
+                class="btn btn-primary">Subscribe</button>
+            </form>
           </div>
         </div>
-      </footer>
-    
-      <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
-      
+        <hr class="bg-white">
+        <div class="text-center">
+          <p>&copy; 2024 Real Estate Company. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
       // Swiper JS
-var swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    autoplay: {
-        delay: 5000, // Slide change delay in milliseconds
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 5000, // Slide change delay in milliseconds
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
             slidesPerView: 2,
             spaceBetween: 20,
-        },
-        768: {
+          },
+          768: {
             slidesPerView: 2,
             spaceBetween: 20,
-        },
-        1024: {
+          },
+          1024: {
             slidesPerView: 3,
             spaceBetween: 20,
+          },
         },
-    },
-});
+      });
 
     </script>
-  </body>
+</body>
+
 </html>
